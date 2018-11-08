@@ -6,7 +6,12 @@
   </head>
 <body>
   <h1>Directorio programas universtarios Colombia</h1>
+  
+  <!--// FORMULARIO BÚSQUEDAS -->
+  
+  <!--// FIN FORMULARIO BÚSQUEDAS -->
 <?php
+  include("includes/base.php");
   $resultado = 0;
   if ($resultado ==1){
     include("resulados.php");
