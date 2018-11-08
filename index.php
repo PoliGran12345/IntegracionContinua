@@ -14,7 +14,7 @@
   include("includes/base.php");
   $resultado = 0;
   if ($resultado ==1){
-    include("resulados.php");
+    include("includes/resulados.php");
   }
 ?>
 </body>
