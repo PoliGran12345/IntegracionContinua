@@ -8,6 +8,14 @@
   <h1>Directorio programas universtarios Colombia</h1>
   
   <!--// FORMULARIO BÚSQUEDAS -->
+  <form class="" method="get">
+    
+<label for="cuidad"></label>
+   <h1>ingrese cuidad </h1></hq> <input type="text" name="cuidad" value="">
+    <button type="submit" name="button">enviar</button>
+    
+</form>
+  
   
   <!--// FIN FORMULARIO BÚSQUEDAS -->
 <?php
