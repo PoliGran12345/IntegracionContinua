@@ -12,3 +12,8 @@ body {}
 .contenedor_1 label {
 	font-weight:bold;
 }
+/* estilo input text */
+.contenedor_1 form input[type=text] {
+	width: 50%;
+	padding: 5px;
+}
