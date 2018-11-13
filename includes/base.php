@@ -2,19 +2,28 @@
 ini_set('memory_limit', '1024M');
 /*
 	https://dev.socrata.com/docs/datatypes/text.html
-	nombrenivelacademico
 */
 /* ###############  PAGINACIÓN  ########################### */
-$p1 = "100";	// cantidad
+$p1 = "22000";	// cantidad
 $p2 = "0";		// desde
 /* ######################################################## */
 /* ###############  PARAMETROS  ########################### */
-$estado = "ACTIVO";
-$ciudad = "MEDE";
-$nivel = "PREGRADO";
-/* ######################################################## */   // AND starts_with(nombrenivelacademico,'".$nivel."')
-$parametros = "\$where=starts_with(nombremunicipioinstitucion,'".$ciudad."')&";  //
-$fuente = "https://www.datos.gov.co/resource/jtq6-33tt.json?nombreestadoprograma=".$estado."&".$parametros/* ."\$limit=". $p1 ."&\$offset=".$p2 */;
+$estado = "ACTIVO"; //	ACTIVO 
+$ciudad = "MEDELLIN"; // CIUDAD DÓNDE SE DA EL PROGRAMA
+$nivel = "POSGRADO"; // NIVEL POSGRADO - PREGRADO
+$origen = "PRIVADA"; // PUBLICA - PRIVADA
+$programa = "ADMIN"; // SÓLO MAYÚSCULAS
+/* ######################################################## */ 
+$parametros= Array(
+	"nombreestadoprograma=".$estado,
+	"&nombremunicipioinstitucion=".$ciudad,
+	"&nombreorigeninstitucional=".$origen,
+	"&nombrenivelacademico=".$nivel,
+	"&\$where=contains(nombreprograma,'".$programa."')",	
+);
+$parametro = implode($parametros);
+$fuente = "https://www.datos.gov.co/resource/jtq6-33tt.json?".$parametro."&\$limit=". $p1 ."&\$offset=".$p2;
+
 
 /* ###############  CURL  ########################### */
 $cc2 = curl_init();
@@ -34,3 +43,4 @@ echo "</pre>";
 
 
 
+//echo $fuente;
