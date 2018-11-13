@@ -1,1 +1,15 @@
 body {}
+body {}
+.contenedor_1{
+	width:980px; 
+	margin:0 auto;
+}
+/* distancia espaciado formulario*/
+.contenedor_1 p {
+	margin:5px;
+	padding:0;
+}
+/* estilo para los labels del formulario */
+.contenedor_1 label {
+	font-weight:bold;
+}
