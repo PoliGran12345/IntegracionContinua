@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Programas universitarios</title>
-    <link rel="stylesheet" type="text/css" href="estilos/estilo.css">
-  </head>
+</head>
 <body>
-  <h1>Directorio programas universtarios Colombia</h1>
-  
-  <!--// FORMULARIO BÚSQUEDAS -->
-  <form class="" method="get">
-    
-<label for="cuidad"></label>
-   <h1>ingrese cuidad </h1></hq> <input type="text" name="cuidad" value="">
-    <button type="submit" name="button">enviar</button>
-    
+<h1>Directorio programas universtarios Colombia</h1>
+ <!--// FORMULARIO BÚSQUEDAS -->
+<form action="" method="post">
+	<label>Ingrese ciudad</label>
+	<p><input type="text" name="ciudad" value="" /><p> <!-- ¿ponemos un listado? -->
+	<label>Ingrese nivel</label>
+	<p><input type="text" name="nivel" value="" /><p>
+	<input type="submit" value="Buscar" />
 </form>
-  
-  
-  <!--// FIN FORMULARIO BÚSQUEDAS -->
-<?php
-  include("includes/base.php");
-  $resultado = 0;
-  if ($resultado ==1){
-    include("includes/resulados.php");
-  }
+<!--// FIN FORMULARIO BÚSQUEDAS -->
+<?php 
+
+if(isset($_POST['ciudad']) ) {
+    //$ciudad = $_POST['ciudad'];	
+	include("includes/resultados.php");
+} else {}
+
 ?>
 </body>
 </html>
+<!-- #################################### 
+
+		Politécnico GranColombiano 
+		Integración contínua 
+
+#################################### -->
