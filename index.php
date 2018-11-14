@@ -16,6 +16,11 @@
 		  <option value="1">PREGRADO</option>
 		  <option value="2">POSGRADO</option>
 		</select><p>
+		<label>Seleccione origen de la universidad</label>
+		<p><select name="origen">
+		  <option value="1">PRIVADA</option>
+		  <option value="2">OFICIAL</option>
+		</select><p>
 		<label>¿Qué le gustaría estudiar?</label>
 		<p><input type="text" name="programa" value="" placeholder="EJ: MEDICINA, INGENIERIA" /><p>
 		<input type="submit" value="Buscar" />
@@ -23,7 +28,7 @@
 	<!--// FIN FORMULARIO BÚSQUEDAS -->
 <?php 
 
-	if(isset($_POST['ciudad']) && isset($_POST['nivel'])  ) {
+	if(isset($_POST['ciudad']) && isset($_POST['nivel']) && isset($_POST['programa']) && isset($_POST['origen'])) {
 		//$ciudad = $_POST['ciudad'];	
 		include("includes/resultados.php");
 	} else {}
